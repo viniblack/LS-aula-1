@@ -55,16 +55,4 @@
 
 
 
-$semana['dom'] = 'Durmo';
-$semana['seg'] = 'Estudo';
-$semana['ter'] = 'Trabalho';
-$semana['qua'] = 'Viajo';
-$semana['qui'] = 'Assisto';
-$semana['sex'] = 'Converso';
-$semana['sab'] = 'Jogo';
-
-echo "Dia a dia <br><br>";
-
-foreach($semana as $dia => $acao){
-  echo "$dia eu $acao <br>";
-}
+include_once('./links.html');
