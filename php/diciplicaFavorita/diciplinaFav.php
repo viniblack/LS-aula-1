@@ -9,12 +9,12 @@
 </head>
 
 <body>
-  <form action="recebeDisciplinaFav.php" method="POST">
+  <form action="recebeDisciplinaFavBD.php" method="POST">
     <label for="diciplina">Nome da diciplina</label>
     <input type="text" name="diciplina" id="diciplina">
     <br>
     <label for="professor">Nome do professor</label>
-    <input type="text" name="professor" id="professor">
+    <input type="text" name="professor" id="professor" >
     <br>
 
     <label for="data">Dia da aula</label>
