@@ -35,7 +35,8 @@ $bd_pass = '123!@#qweQWE';
 $bd = new PDO($bd_dsn, $bd_user, $bd_pass);
 
 $stmt = $bd->prepare(
-  'INSERT disciplina 
+  // Adicionei o nome do BD na frente da tabela e funcionou
+  'INSERT ling_serv.disciplina 
     (nome, professor, dia, descricao, end_ip) 
   VALUES
    (:nome, :professor, :dia, :descricao, :end_ip)'
@@ -46,13 +47,9 @@ $valor[':professor'] = $_POST["professor"];
 $valor[':dia'] = $_POST['data'];
 $valor[':descricao'] = $_POST["descricao"];
 $valor[':end_ip'] = $_SERVER["SERVER_ADDR"];
-echo "<pre>";
-var_dump($stmt->errorInfo());
 
 if ($stmt->execute($valor)) {
   echo "<br><br>Dados gravados com sucesso!";
 } else {
   echo "<br><br>Oh no!! Não consegui gravar no banco :-(";
 }
-
-
