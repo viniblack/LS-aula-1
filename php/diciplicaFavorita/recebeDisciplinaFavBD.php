@@ -14,7 +14,7 @@ $_POST["data"] = $_POST["data"] ?? 'Não informado';
 $_POST["descricao"] = $_POST["descricao"] ?? 'Não informado';
 
 if (!$_POST["diciplina"] || empty($_POST["data"])) {
-  die("Favor digitar seu nome");
+  die("Favor digitar seu nome ou a data da aula");
 }
 
 echo "A sua materia favorita é {$_POST["diciplina"]}. <br> 
@@ -28,7 +28,7 @@ $value = $_POST;
 
 // Conectando com o banco de dados
 
-$bd_dsn = 'mysql:host=127.0.0.1;port=3306;bdname=ling_serv';
+$bd_dsn = 'mysql:host=127.0.0.1;port=3306;dbname=ling_serv';
 $bd_user = 'root';
 $bd_pass = '123!@#qweQWE';
 
@@ -36,7 +36,7 @@ $bd = new PDO($bd_dsn, $bd_user, $bd_pass);
 
 $stmt = $bd->prepare(
   // Adicionei o nome do BD na frente da tabela e funcionou
-  'INSERT ling_serv.disciplina 
+  'INSERT disciplina 
     (nome, professor, dia, descricao, end_ip) 
   VALUES
    (:nome, :professor, :dia, :descricao, :end_ip)'
@@ -53,3 +53,5 @@ if ($stmt->execute($valor)) {
 } else {
   echo "<br><br>Oh no!! Não consegui gravar no banco :-(";
 }
+
+var_dump($stmt->errorInfo());
