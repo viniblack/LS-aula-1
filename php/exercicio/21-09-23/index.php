@@ -18,7 +18,7 @@
       <a target="_black" href="pegandoBanco.php">Consultar filmes</a>
     </li>
     <li>
-      <a target="_black" href="pegandoBanco.php">Atualizar filmes</a>
+      <a target="_black" href="atualizaDado.php">Atualizar filmes</a>
     </li>
   </ul>
 

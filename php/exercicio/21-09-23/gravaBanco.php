@@ -28,9 +28,9 @@ $value[':nome'] = $name;
 $value[':ano'] = $date;
 
 if ($stmt->execute($value)) {
-  echo "<br><br>Dados gravados com sucesso!";
+  echo "Dados gravados com sucesso!       <br> <a target='_black' href='pegandoBanco.php'>Consultar filmes</a>";
 } else {
-  echo "<br><br>Oh no!! Não consegui gravar no banco :-(";
+  echo "Oh no!! Não consegui gravar no banco :-(";
 }
 
 // var_dump($stmt->errorInfo());
