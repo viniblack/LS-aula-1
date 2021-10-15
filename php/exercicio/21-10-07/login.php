@@ -70,13 +70,11 @@ if ($registro) {
   } else {
     session_destroy();
     echo "Credenciais inválidas";
+    echo "<a href='login.html'> Login </a>";
+
   }
 }else{
   session_destroy();
   echo "Faça o login antes";
+  echo "<a href='login.html'> Login </a>";
 }
-
-echo "
-  
-
-";
