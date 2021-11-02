@@ -50,4 +50,4 @@ if ($image && $nome) {
   }
 }
 
-// header("location:./listarColega.php");
+header("location:./listarColega.php");
